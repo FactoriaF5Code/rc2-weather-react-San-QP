@@ -1,0 +1,143 @@
+@import '../../App.css';
+
+.panel{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 900px;
+    font-family: var(--font-family);
+    background-color: var(--color-main);
+    border-radius: 0 20px 20px 20px;
+}
+
+.divider{
+    height: 20px;
+    width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-main);
+}
+
+.deepBlue{
+    background-color: var(--color-deepblue);
+    width: 170px;
+    border-radius: 10px 0 0 10px ;
+}
+
+.orange{
+    background-color: var(--color-orange);
+    width: 170px;
+}
+
+.blue{
+    background-color: var(--color-blue);
+    width: 170px;
+}
+
+.yellow{
+    background-color: var(--color-yellow);
+    width: 170px;
+    border-radius: 0 10px 10px 0 ;
+}
+
+.searchContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    height: 60px;
+    padding: 40px 0;
+}
+
+.searchContainer input{
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid rgb(212, 212, 212);
+    padding: 10px 20px;
+    font-family: var(--font-family);
+    font-size: 18px;
+    width: 300px;
+}
+
+.searchButton{
+    background-color: var(--color-deepblue);
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+
+.searchButton:hover{
+    background-color: var(--color-orange);
+    box-shadow: 10px 10px 0px 0px var(--color-deepblue);
+}
+
+.cardContainer{
+    margin:20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle{
+    width:30px;
+    height:30px;
+    border-radius: 20px;
+    background-color: var(--color-orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10px;
+}
+
+.material-symbols-sharp{
+    color: var(--color-main);
+    font-size: 22px;
+    text-align: center;
+}
+
+.cityName{
+    color:var(--color-deepblue);
+    text-align: center;
+}
+
+.iconWeather{
+    width: 200px;
+}
+
+.info{
+    display: flex;
+}
+
+
+.weather{
+    color: var(--color-deepblue);
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.temp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainTemp{
+    color: var(--color-deepblue);
+    font-size: 110px;
+    font-weight: 700;
+}
+
+.temp-max-min{
+    font-size: 18px;
+    color: var(--color-deepblue);
+    font-weight: 500;
+}
+
+
+
+

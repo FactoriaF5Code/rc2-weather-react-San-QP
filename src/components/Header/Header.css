@@ -1,0 +1,30 @@
+@import '../../App.css';
+.headerPage{
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+}
+
+.headerContainer{
+    background-color: var(--color-main);
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:30px 0px;
+    border-radius:20px 20px 0 0;
+}
+
+.logo{
+    text-transform: uppercase;
+    color: var(--color-deepblue);
+    font-size: 36px;
+    letter-spacing: 0.1em;
+}
+
+.description{
+    font-size: 18px;
+    color: var(--color-deepblue);
+    margin:5px;
+    font-weight: 400;
+}
