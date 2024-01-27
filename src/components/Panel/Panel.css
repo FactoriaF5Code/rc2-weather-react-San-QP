@@ -14,7 +14,7 @@
     flex-direction: column;
     font-family: var(--font-family);
     background-color: var(--color-main);
-    padding: 60px;
+    padding: 60px 60px 0px 60px;
 }
 
 .searchContainer{
@@ -46,6 +46,10 @@
 .searchButton:hover{
     background-color: var(--color-orange);
     box-shadow: 10px 10px 0px 0px var(--color-deepblue);
+}
+
+.weatherInfoContainer{
+    margin-bottom: 70px;
 }
 
 .locationDate{
@@ -148,6 +152,14 @@
     text-transform: uppercase;
 }
 
+.footer{
+    text-align: center;
+    font-family: var(--font-family);
+    color: var(--color-deepblue);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
 
 
 

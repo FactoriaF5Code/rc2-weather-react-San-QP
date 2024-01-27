@@ -127,6 +127,8 @@ export const Panel = () => {
                 <h2 className="cityName">{"Ubicación no disponible"}</h2>
                 )}
             </div>
+            <p className='footer'>Un proyecto de Sansan para Factoria F5 - Bootcamp RuralCamp.</p>
+
         </section>
         <section className="columnMosaic">
             <img src="/public/mosaic/mosaic2-right.svg" alt="mosaic decoration" className="mosaic"/>
