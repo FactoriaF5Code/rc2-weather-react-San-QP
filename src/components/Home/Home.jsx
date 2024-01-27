@@ -8,6 +8,7 @@ export const Home = () => {
     <main className='home'>
       <Header />
       <Panel />
+      
     </main>
   );
 };

@@ -118,10 +118,13 @@
 .detailsButton{
     background-color: var(--color-orange);
     padding: 10px 20px;
+    cursor: pointer;
+}
+
+.detailsButton a{
     font-size: 18px;
     font-weight: 500;
-    color: white;
-    cursor: pointer;
+    color:white;
 }
 
 .detailsButton:hover{

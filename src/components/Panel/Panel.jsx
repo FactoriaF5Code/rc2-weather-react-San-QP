@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import "./Panel.css";
 import { getUserLocation } from "../../geolocation";
 import Icons from '../Icons';
@@ -107,7 +108,7 @@ export const Panel = () => {
                                 </p>
                             </div>
                             <div className="detailsButton">
-                                Más detalles
+                                <Link to="/weatherDetails" >Más detalles</Link>
                             </div>
                         </li>
                         <li className="mainWeather">
