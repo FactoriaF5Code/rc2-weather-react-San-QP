@@ -92,8 +92,7 @@ export const Panel = () => {
                         <h2 className="cityName">{weatherValues.city.name}</h2>
                         </li>
                         <li className="date">
-                            {`${currentDayOfWeek}, ${weatherValues.list[0].dt_txt.substring(0, weatherValues.list[0].dt_txt.length - 9)}`}
-                            {`, ${new Date().toLocaleTimeString()}`}
+                            {`${currentDayOfWeek}, ${new Date().toLocaleDateString()}, ${new Date().toLocaleTimeString()}`}
                         </li>
                     </ul>
                     <ul className="tempWeather">

@@ -25,7 +25,7 @@ const Icons = (icon) => {
             console.log('NIEBLA');
             break;
         case 'Clouds':
-            icon='../../public/icons-weather/light/bad-clouds.svg'
+            icon='../../public/icons-weather/light/clouds.svg'
             console.log('NUBES');
             break;
         default:
