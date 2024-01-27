@@ -1,0 +1,95 @@
+.moreDetails{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.weatherToday{
+    width: 300px;
+    background-color: #cccccc;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.weatherToday h3{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--color-deepblue);
+    letter-spacing: 0.15rem;
+}
+
+.todayDetails {
+    margin-top: 20px;
+    font-size: 15px;
+    border-collapse: collapse;
+    letter-spacing: 0.1rem;
+}
+
+.todayDetails th{
+    border-top: 1px solid var(--color-deepblue);
+    padding: 10px;
+}
+
+.fieldDescription{
+    text-align: left;
+    font-weight: 400;
+}
+
+.value{
+    text-align: right;
+    font-weight: 700;
+}
+
+.forecast{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    width: 500px;
+}
+
+.forecast h3{
+    color: var(--color-blue);
+    font-size: 18px;
+    letter-spacing: 0.15rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.hourlyForecast, .daylyForecast{
+    display: flex;
+    flex-direction: column;
+}
+
+.hourlyForecast{
+    width: 30%;
+}
+
+.forecastTable{
+    border-collapse: collapse;
+}
+
+.forecastTable th{
+    border-top: 1px solid var(--color-deepblue);
+    padding: 10px;
+}
+
+.backButton{
+    text-align: center;
+}
+
+.backButton a{
+    cursor: pointer;
+    text-decoration: underline;
+    color:var(--color-orange);
+    font-size: 21px;
+    letter-spacing: 0.15rem;
+    font-weight: 500;
+}
+
+.backButton a:hover{
+    color: var(--color-deepblue);
+}
+

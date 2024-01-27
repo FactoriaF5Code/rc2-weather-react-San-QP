@@ -156,8 +156,8 @@
 .footer{
     text-align: center;
     font-family: var(--font-family);
-    color: var(--color-deepblue);
-    font-size: 14px;
+    color:#727272;
+    font-size: 13px;
     font-weight: 400;
     letter-spacing: 0.1em;
     margin-bottom: 10px;
