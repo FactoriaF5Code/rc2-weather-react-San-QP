@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from "react-router-dom";
 import { Header } from "../Header/Header";
-import Icons from '../Icons';
+import { HourlyForecast } from "./HourlyForecast";
 import './Details.css';
 import '../Home/Home.css';
 import '../Panel/Panel.css';
@@ -9,13 +9,6 @@ import '../Panel/Panel.css';
 export const Details = () => {
   const [weatherValues, setWeatherValues] = useState("");
   const { location } = useParams();
-  const [icon1, setIcon1] = useState("");
-  const [icon2, setIcon2] = useState("");
-  const [icon3, setIcon3] = useState("");
-  const [icon4, setIcon4] = useState("");
-  const [icon5, setIcon5] = useState("");
-  const [icon6, setIcon6] = useState("");
-  const [icon7, setIcon7] = useState("");
 
   const currentDate = new Date();
   const daysOfWeek = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
@@ -32,13 +25,6 @@ export const Details = () => {
           if (data.cod >= 400) {
               setWeatherValues(false);
           } else {
-              setIcon1(data.list[1].weather[0].main);
-              setIcon2(data.list[0].weather[0].main);
-              setIcon3(data.list[0].weather[0].main);
-              setIcon4(data.list[0].weather[0].main);
-              setIcon5(data.list[0].weather[0].main);
-              setIcon6(data.list[0].weather[0].main);
-              setIcon7(data.list[0].weather[0].main);
               setWeatherValues(data);
           }
       })
@@ -108,90 +94,7 @@ export const Details = () => {
                   </table>
                 </div>
                 <div className='forecast'>
-                  <div className='hourlyForecast'>
-                    <h3>PRONÓSTICO POR HORAS</h3>
-                    <table className='forecastTable'>
-                      <tbody>
-                        <tr>
-                          <th className='fieldDescription'>{weatherValues.list[0].dt_txt.slice(11, 16)}</th>
-                          <th>
-                            <img
-                                className="smallIconWeather"
-                                src={Icons(icon1)}
-                                alt="icon-weather"
-                            />
-                          </th>
-                          <th className='weatherDescription'>{weatherValues.list[0].weather[0].description}</th>
-                        </tr>
-                        <tr>
-                          <th className='fieldDescription'>{weatherValues.list[1].dt_txt.slice(11, 16)}</th>
-                          <th>
-                            <img
-                                  className="smallIconWeather"
-                                  src={Icons(icon2)}
-                                  alt="icon-weather"
-                              />
-                          </th>
-                          <th className='weatherDescription'>{weatherValues.list[1].weather[0].description}</th>
-                        </tr>
-                        <tr>
-                          <th className='fieldDescription'>{weatherValues.list[2].dt_txt.slice(11, 16)}</th>
-                          <th>                            
-                            <img
-                                className="smallIconWeather"
-                                src={Icons(icon3)}
-                                alt="icon-weather"
-                            />
-                          </th>
-                          <th className='weatherDescription'>{weatherValues.list[2].weather[0].description}</th>
-                        </tr>
-                        <tr>
-                          <th className='fieldDescription'>{weatherValues.list[3].dt_txt.slice(11, 16)}</th>
-                          <th>                           
-                            <img
-                                className="smallIconWeather"
-                                src={Icons(icon4)}
-                                alt="icon-weather"
-                            />
-                          </th>
-                          <th className='weatherDescription'>{weatherValues.list[3].weather[0].description}</th>
-                        </tr>
-                        <tr>
-                          <th className='fieldDescription'>{weatherValues.list[4].dt_txt.slice(11, 16)}</th>
-                          <th>
-                            <img
-                                className="smallIconWeather"
-                                src={Icons(icon5)}
-                                alt="icon-weather"
-                            />
-                          </th>
-                          <th className='weatherDescription'>{weatherValues.list[4].weather[0].description}</th>
-                        </tr>
-                        <tr>
-                          <th className='fieldDescription'>{weatherValues.list[5].dt_txt.slice(11, 16)}</th>
-                          <th>                           
-                            <img
-                                className="smallIconWeather"
-                                src={Icons(icon6)}
-                                alt="icon-weather"
-                            />
-                          </th>
-                          <th className='weatherDescription'>{weatherValues.list[5].weather[0].description}</th>
-                        </tr>
-                        <tr>
-                          <th className='fieldDescription'>{weatherValues.list[6].dt_txt.slice(11, 16)}</th>
-                          <th>
-                          <img
-                              className="smallIconWeather"
-                              src={Icons(icon7)}
-                              alt="icon-weather"
-                          />
-                          </th>
-                          <th className='weatherDescription'>{weatherValues.list[6].weather[0].description}</th>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                  <HourlyForecast weatherValues={weatherValues} />
                   {/* <div className='daylyForecast'>
                     <h3>PRONÓSTICO <br/> DIARIO</h3>
                     <table className='forecastTable'>
