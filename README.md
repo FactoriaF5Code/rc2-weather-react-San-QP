@@ -29,6 +29,5 @@
     - https://www.youtube.com/watch?v=uyq0Ub26PVI
 
 - EXTRAS:
-    - Personalizar iconos.
     - Que el color de la temperatura cambie por rangos de azul a rojo.
     - Versión darkmode (si es de día o de noche??)

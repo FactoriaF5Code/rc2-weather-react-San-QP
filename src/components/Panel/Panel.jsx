@@ -93,6 +93,7 @@ export const Panel = () => {
                         </li>
                         <li className="date">
                             {`${currentDayOfWeek}, ${weatherValues.list[0].dt_txt.substring(0, weatherValues.list[0].dt_txt.length - 9)}`}
+                            {`, ${new Date().toLocaleTimeString()}`}
                         </li>
                     </ul>
                     <ul className="tempWeather">
@@ -124,9 +125,17 @@ export const Panel = () => {
                     
                 </div>
                 ) : (
-                <h2 className="cityName">{"Ubicación no disponible"}</h2>
+                <ul className="locationDate">
+                    <li className="location">
+                        <div className="circle">
+                            <span className="material-symbols-sharp">location_on</span>
+                        </div>
+                    <h2 className="cityName">Ubicación desconocida</h2>
+                    </li>
+                </ul>
                 )}
             </div>
+            
             <p className='footer'>Un proyecto de Sansan para Factoria F5 - Bootcamp RuralCamp.</p>
 
         </section>

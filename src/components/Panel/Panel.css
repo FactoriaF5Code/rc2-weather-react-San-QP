@@ -12,6 +12,7 @@
 .panel{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     font-family: var(--font-family);
     background-color: var(--color-main);
     padding: 60px 60px 0px 60px;
@@ -48,10 +49,6 @@
     box-shadow: 10px 10px 0px 0px var(--color-deepblue);
 }
 
-.weatherInfoContainer{
-    margin-bottom: 70px;
-}
-
 .locationDate{
     display: flex;
     flex-direction: column;
@@ -79,6 +76,7 @@
     color: var(--color-main);
     font-size: 22px;
     text-align: center;
+    margin-right:1px;
 }
 
 .cityName{
@@ -159,6 +157,7 @@
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.1em;
+    margin-bottom: 10px;
 }
 
 
