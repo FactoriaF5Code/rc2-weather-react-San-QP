@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from "react-router-dom";
 import { Header } from "../Header/Header";
 import { HourlyForecast } from "./HourlyForecast";
+import { DaylyForecast } from "./DaylyForecast";
 import './Details.css';
 import '../Home/Home.css';
 import '../Panel/Panel.css';
@@ -47,7 +48,7 @@ export const Details = () => {
             <img src="/public/mosaic/mosaic3-left.svg" alt="mosaic decoration" className="mosaic"/>
             <img src="/public/mosaic/mosaic4-left.svg" alt="mosaic decoration" className="mosaic"/>
         </section>
-        <section className="panel">
+        <section className="panelDetails">
           {weatherValues ? (
             <>   
               <ul className="locationDate">
@@ -95,49 +96,14 @@ export const Details = () => {
                 </div>
                 <div className='forecast'>
                   <HourlyForecast weatherValues={weatherValues} />
-                  {/* <div className='daylyForecast'>
-                    <h3>PRONÓSTICO <br/> DIARIO</h3>
-                    <table className='forecastTable'>
-                      <tbody>
-                        <tr>
-                          <th className='fieldDescription'>Domingo, 28</th>
-                          <th>icon</th>
-                        </tr>
-                        <tr>
-                          <th className='fieldDescription'>Domingo, 28</th>
-                          <th>icon</th>
-                        </tr>
-                        <tr>
-                          <th className='fieldDescription'>Domingo, 28</th>
-                          <th>icon</th>
-                        </tr>
-                        <tr>
-                          <th className='fieldDescription'>Domingo, 28</th>
-                          <th>icon</th>
-                        </tr>
-                        <tr>
-                          <th className='fieldDescription'>Domingo, 28</th>
-                          <th>icon</th>
-                        </tr>
-                        <tr>
-                          <th className='fieldDescription'>Domingo, 28</th>
-                          <th>icon</th>
-                        </tr>
-                        <tr>
-                          <th className='fieldDescription'>Domingo, 28</th>
-                          <th>icon</th>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div> */}
+                  <DaylyForecast weatherValues={weatherValues} />
                 </div>
               </div>
               <div className='backButton'>
                 <Link to="/">◄ Volver</Link>
               </div>
             </> 
-                    
-                    ) : (
+            ) : (
             <ul className="locationDate">
                 <li className="location">
                     <div className="circle">

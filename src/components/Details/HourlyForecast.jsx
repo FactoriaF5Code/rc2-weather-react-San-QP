@@ -3,6 +3,7 @@ import './Details.css';
 import '../Home/Home.css';
 import '../Panel/Panel.css';
 
+
 export const HourlyForecast = ({ weatherValues }) => {
     return (
       <div className='hourlyForecast'>
