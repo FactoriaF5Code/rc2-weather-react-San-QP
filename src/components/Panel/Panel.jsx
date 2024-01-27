@@ -78,7 +78,7 @@ export const Panel = () => {
                     className="searchButton"
                     onClick={() => handleButtonSearch(document.querySelector('input').value)}
                 >
-                    Buscar
+                    Buscar                    
                 </div>
             </div>
 
@@ -108,7 +108,7 @@ export const Panel = () => {
                                 </p>
                             </div>
                             <div className="detailsButton">
-                                <Link to="/weatherDetails" >Más detalles</Link>
+                                <Link to={`/weatherDetails/${search}`}>Más detalles</Link>
                             </div>
                         </li>
                         <li className="mainWeather">

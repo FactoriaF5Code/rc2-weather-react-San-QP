@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Header } from "../Header/Header";
-import { getUserLocation } from "../../geolocation";
 import Icons from '../Icons';
 import './Details.css';
 import '../Home/Home.css';
 import '../Panel/Panel.css';
 
 export const Details = () => {
-  const [search, setSearch] = useState("");
   const [weatherValues, setWeatherValues] = useState("");
+  const { location } = useParams();
   const [icon1, setIcon1] = useState("");
   const [icon2, setIcon2] = useState("");
   const [icon3, setIcon3] = useState("");
@@ -22,7 +21,7 @@ export const Details = () => {
   const daysOfWeek = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
   const currentDayOfWeek = daysOfWeek[currentDate.getDay()]
         
-  const URL = `https://api.openweathermap.org/data/2.5/forecast?q=${search}&lang=es&units=metric&appid=${import.meta.env.VITE_API_KEY}`;
+  const URL = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&lang=es&units=metric&appid=${import.meta.env.VITE_API_KEY}`;
     
   const getData = async () => {
       await fetch(URL)
@@ -47,23 +46,11 @@ export const Details = () => {
           console.error("Error al obtener datos de la API:", error);
       });
   };
-    
-    
-  useEffect(() => {
-      getUserLocation()
-          .then((city) => {
-              setSearch(city);
-          })
-          .catch((error) => {
-          console.error('Error al obtener la ubicación:', error);
-          });
-      },        
-      []);
-      
+          
   useEffect(() => {
       getData();
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      }, [search]); 
+      }, [location]); 
   
   return (
     <main className='home'>
