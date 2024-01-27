@@ -1,8 +1,5 @@
-@import '../../App.css';
-
 .home{
     margin:auto;
     height:100vh;
-    padding:100px 0;
     background-color: var(--color-deepblue);
 }
