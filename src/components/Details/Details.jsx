@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { Header } from "../Header/Header";
 import { getUserLocation } from "../../geolocation";
-// import Icons from '../Icons';
+import Icons from '../Icons';
 import './Details.css';
 import '../Home/Home.css';
 import '../Panel/Panel.css';
@@ -10,7 +10,13 @@ import '../Panel/Panel.css';
 export const Details = () => {
   const [search, setSearch] = useState("");
   const [weatherValues, setWeatherValues] = useState("");
-  const [icon, setIcon] = useState("");
+  const [icon1, setIcon1] = useState("");
+  const [icon2, setIcon2] = useState("");
+  const [icon3, setIcon3] = useState("");
+  const [icon4, setIcon4] = useState("");
+  const [icon5, setIcon5] = useState("");
+  const [icon6, setIcon6] = useState("");
+  const [icon7, setIcon7] = useState("");
 
   const currentDate = new Date();
   const daysOfWeek = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
@@ -27,7 +33,13 @@ export const Details = () => {
           if (data.cod >= 400) {
               setWeatherValues(false);
           } else {
-              setIcon(data.list[0].weather[0].main);
+              setIcon1(data.list[1].weather[0].main);
+              setIcon2(data.list[0].weather[0].main);
+              setIcon3(data.list[0].weather[0].main);
+              setIcon4(data.list[0].weather[0].main);
+              setIcon5(data.list[0].weather[0].main);
+              setIcon6(data.list[0].weather[0].main);
+              setIcon7(data.list[0].weather[0].main);
               setWeatherValues(data);
           }
       })
@@ -83,27 +95,27 @@ export const Details = () => {
                     <tbody>
                       <tr>
                         <th className='fieldDescription'> Temperatura</th>
-                        <th className='value'>0º</th>
+                        <th className='value'>{weatherValues.list[0].main.temp.toFixed(0)}&deg;</th>
                       </tr>
                       <tr>
                         <th className='fieldDescription'>Temp. máxima</th>
-                        <th className='value'>0º</th>
+                        <th className='value'>{weatherValues.list[0].main.temp_max.toFixed(0)}&deg;</th>
                       </tr>
                       <tr>
                         <th className='fieldDescription'>Temp. mínima</th>
-                        <th className='value'>0º</th>
+                        <th className='value'>{weatherValues.list[0].main.temp_min.toFixed(0)}&deg;</th>
                       </tr>
                       <tr>
                         <th className='fieldDescription'>Sensación térmica</th>
-                        <th className='value'>0º</th>
+                        <th className='value'>{weatherValues.list[0].main.feels_like.toFixed(0)}&deg;</th>
                       </tr>
                       <tr>
                         <th className='fieldDescription'>Humedad</th>
-                        <th className='value'>0%</th>
+                        <th className='value'>{weatherValues.list[0].main.humidity}%</th>
                       </tr>
                       <tr>
                         <th className='fieldDescription'>Viento</th>
-                        <th className='value'>0 km/h</th>
+                        <th className='value'>{weatherValues.list[0].wind.speed} km/h</th>
                       </tr>
                     </tbody>
                   </table>
@@ -114,37 +126,86 @@ export const Details = () => {
                     <table className='forecastTable'>
                       <tbody>
                         <tr>
-                          <th className='fieldDescription'>15:00</th>
-                          <th>icon</th>
+                          <th className='fieldDescription'>{weatherValues.list[0].dt_txt.slice(11, 16)}</th>
+                          <th>
+                            <img
+                                className="smallIconWeather"
+                                src={Icons(icon1)}
+                                alt="icon-weather"
+                            />
+                          </th>
+                          <th className='weatherDescription'>{weatherValues.list[0].weather[0].description}</th>
                         </tr>
                         <tr>
-                          <th className='fieldDescription'>15:00</th>
-                          <th>icon</th>
+                          <th className='fieldDescription'>{weatherValues.list[1].dt_txt.slice(11, 16)}</th>
+                          <th>
+                            <img
+                                  className="smallIconWeather"
+                                  src={Icons(icon2)}
+                                  alt="icon-weather"
+                              />
+                          </th>
+                          <th className='weatherDescription'>{weatherValues.list[1].weather[0].description}</th>
                         </tr>
                         <tr>
-                          <th className='fieldDescription'>15:00</th>
-                          <th>icon</th>
+                          <th className='fieldDescription'>{weatherValues.list[2].dt_txt.slice(11, 16)}</th>
+                          <th>                            
+                            <img
+                                className="smallIconWeather"
+                                src={Icons(icon3)}
+                                alt="icon-weather"
+                            />
+                          </th>
+                          <th className='weatherDescription'>{weatherValues.list[2].weather[0].description}</th>
                         </tr>
                         <tr>
-                          <th className='fieldDescription'>15:00</th>
-                          <th>icon</th>
+                          <th className='fieldDescription'>{weatherValues.list[3].dt_txt.slice(11, 16)}</th>
+                          <th>                           
+                            <img
+                                className="smallIconWeather"
+                                src={Icons(icon4)}
+                                alt="icon-weather"
+                            />
+                          </th>
+                          <th className='weatherDescription'>{weatherValues.list[3].weather[0].description}</th>
                         </tr>
                         <tr>
-                          <th className='fieldDescription'>15:00</th>
-                          <th>icon</th>
+                          <th className='fieldDescription'>{weatherValues.list[4].dt_txt.slice(11, 16)}</th>
+                          <th>
+                            <img
+                                className="smallIconWeather"
+                                src={Icons(icon5)}
+                                alt="icon-weather"
+                            />
+                          </th>
+                          <th className='weatherDescription'>{weatherValues.list[4].weather[0].description}</th>
                         </tr>
                         <tr>
-                          <th className='fieldDescription'>15:00</th>
-                          <th>icon</th>
+                          <th className='fieldDescription'>{weatherValues.list[5].dt_txt.slice(11, 16)}</th>
+                          <th>                           
+                            <img
+                                className="smallIconWeather"
+                                src={Icons(icon6)}
+                                alt="icon-weather"
+                            />
+                          </th>
+                          <th className='weatherDescription'>{weatherValues.list[5].weather[0].description}</th>
                         </tr>
                         <tr>
-                          <th className='fieldDescription'>15:00</th>
-                          <th>icon</th>
+                          <th className='fieldDescription'>{weatherValues.list[6].dt_txt.slice(11, 16)}</th>
+                          <th>
+                          <img
+                              className="smallIconWeather"
+                              src={Icons(icon7)}
+                              alt="icon-weather"
+                          />
+                          </th>
+                          <th className='weatherDescription'>{weatherValues.list[6].weather[0].description}</th>
                         </tr>
                       </tbody>
                     </table>
                   </div>
-                  <div className='daylyForecast'>
+                  {/* <div className='daylyForecast'>
                     <h3>PRONÓSTICO <br/> DIARIO</h3>
                     <table className='forecastTable'>
                       <tbody>
@@ -178,7 +239,7 @@ export const Details = () => {
                         </tr>
                       </tbody>
                     </table>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className='backButton'>
@@ -209,31 +270,3 @@ export const Details = () => {
     </main>
   )
 }
-
-
-
-/* 
-  <ul className="tempWeather">
-      <li className="temp">
-          <p className="mainTemp">
-              {weatherValues.list[0].main.temp.toFixed(0)}&deg;
-          </p>
-          <div className="tempDetails">
-              <p className="tempMaxMin">
-                  mín. {weatherValues.list[0].main.temp_min.toFixed(0)}&deg; |{" "}
-                  máx. {weatherValues.list[0].main.temp_max.toFixed(0)}&deg;
-              </p>
-          </div>
-
-      </li>
-      <li className="mainWeather">
-          <img
-              className="iconWeather"
-              src={Icons(icon)}
-              alt="icon-weather"
-          />
-          <p className="weather">
-              {weatherValues.list[0].weather[0].description}
-          </p>
-      </li>
-  </ul> */
