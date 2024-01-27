@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+:root {
+    --color-main: #F6EDDE;
+    --color-yellow: #F9CA08;
+    --color-orange: #FF4F1D;
+    --color-blue: #3C65B4;
+    --color-deepblue: #26226C;
+    --font-family: 'Red Hat Display', sans-serif;
+}

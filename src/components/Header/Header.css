@@ -1,0 +1,43 @@
+@import '../../App.css';
+.headerPage{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    font-family: var(--font-family);
+}
+
+
+.headerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo{
+    text-transform: uppercase;
+    color: var(--color-main);
+    font-size: 36px;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.description{
+    font-size: 16px;
+    color: var(--color-main);
+    margin:10px;
+    font-weight: 300;
+    letter-spacing: 0.15rem;
+    text-align: center;
+}
+
+@media (max-width: 780px) {
+    .headerPage{
+        display: flex;
+        justify-content: center;
+        padding:10px 0;
+    }
+    .headerPage img{
+        display: none;
+    }
+}

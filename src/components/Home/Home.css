@@ -1,0 +1,5 @@
+.home{
+    margin:auto;
+    height:100vh;
+    background-color: var(--color-deepblue);
+}
