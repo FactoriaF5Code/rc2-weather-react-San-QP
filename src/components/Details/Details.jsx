@@ -80,97 +80,103 @@ export const Details = () => {
                 <div className='weatherToday'>
                   <h3>EL TIEMPO HOY</h3>
                   <table className='todayDetails'>
-                    <tr>
-                      <th className='fieldDescription'> Temperatura</th>
-                      <th className='value'>0º</th>
-                    </tr>
-                    <tr>
-                      <th className='fieldDescription'>Temp. máxima</th>
-                      <th className='value'>0º</th>
-                    </tr>
-                    <tr>
-                      <th className='fieldDescription'>Temp. mínima</th>
-                      <th className='value'>0º</th>
-                    </tr>
-                    <tr>
-                      <th className='fieldDescription'>Sensación térmica</th>
-                      <th className='value'>0º</th>
-                    </tr>
-                    <tr>
-                      <th className='fieldDescription'>Humedad</th>
-                      <th className='value'>0%</th>
-                    </tr>
-                    <tr>
-                      <th className='fieldDescription'>Viento</th>
-                      <th className='value'>0 km/h</th>
-                    </tr>
+                    <tbody>
+                      <tr>
+                        <th className='fieldDescription'> Temperatura</th>
+                        <th className='value'>0º</th>
+                      </tr>
+                      <tr>
+                        <th className='fieldDescription'>Temp. máxima</th>
+                        <th className='value'>0º</th>
+                      </tr>
+                      <tr>
+                        <th className='fieldDescription'>Temp. mínima</th>
+                        <th className='value'>0º</th>
+                      </tr>
+                      <tr>
+                        <th className='fieldDescription'>Sensación térmica</th>
+                        <th className='value'>0º</th>
+                      </tr>
+                      <tr>
+                        <th className='fieldDescription'>Humedad</th>
+                        <th className='value'>0%</th>
+                      </tr>
+                      <tr>
+                        <th className='fieldDescription'>Viento</th>
+                        <th className='value'>0 km/h</th>
+                      </tr>
+                    </tbody>
                   </table>
                 </div>
                 <div className='forecast'>
                   <div className='hourlyForecast'>
                     <h3>PRONÓSTICO POR HORAS</h3>
                     <table className='forecastTable'>
-                      <tr>
-                        <th className='fieldDescription'>15:00</th>
-                        <th>icon</th>
-                      </tr>
-                      <tr>
-                        <th className='fieldDescription'>15:00</th>
-                        <th>icon</th>
-                      </tr>
-                      <tr>
-                        <th className='fieldDescription'>15:00</th>
-                        <th>icon</th>
-                      </tr>
-                      <tr>
-                        <th className='fieldDescription'>15:00</th>
-                        <th>icon</th>
-                      </tr>
-                      <tr>
-                        <th className='fieldDescription'>15:00</th>
-                        <th>icon</th>
-                      </tr>
-                      <tr>
-                        <th className='fieldDescription'>15:00</th>
-                        <th>icon</th>
-                      </tr>
-                      <tr>
-                        <th className='fieldDescription'>15:00</th>
-                        <th>icon</th>
-                      </tr>
+                      <tbody>
+                        <tr>
+                          <th className='fieldDescription'>15:00</th>
+                          <th>icon</th>
+                        </tr>
+                        <tr>
+                          <th className='fieldDescription'>15:00</th>
+                          <th>icon</th>
+                        </tr>
+                        <tr>
+                          <th className='fieldDescription'>15:00</th>
+                          <th>icon</th>
+                        </tr>
+                        <tr>
+                          <th className='fieldDescription'>15:00</th>
+                          <th>icon</th>
+                        </tr>
+                        <tr>
+                          <th className='fieldDescription'>15:00</th>
+                          <th>icon</th>
+                        </tr>
+                        <tr>
+                          <th className='fieldDescription'>15:00</th>
+                          <th>icon</th>
+                        </tr>
+                        <tr>
+                          <th className='fieldDescription'>15:00</th>
+                          <th>icon</th>
+                        </tr>
+                      </tbody>
                     </table>
                   </div>
                   <div className='daylyForecast'>
                     <h3>PRONÓSTICO <br/> DIARIO</h3>
                     <table className='forecastTable'>
-                      <tr>
-                        <th className='fieldDescription'>Domingo, 28</th>
-                        <th>icon</th>
-                      </tr>
-                      <tr>
-                        <th className='fieldDescription'>Domingo, 28</th>
-                        <th>icon</th>
-                      </tr>
-                      <tr>
-                        <th className='fieldDescription'>Domingo, 28</th>
-                        <th>icon</th>
-                      </tr>
-                      <tr>
-                        <th className='fieldDescription'>Domingo, 28</th>
-                        <th>icon</th>
-                      </tr>
-                      <tr>
-                        <th className='fieldDescription'>Domingo, 28</th>
-                        <th>icon</th>
-                      </tr>
-                      <tr>
-                        <th className='fieldDescription'>Domingo, 28</th>
-                        <th>icon</th>
-                      </tr>
-                      <tr>
-                        <th className='fieldDescription'>Domingo, 28</th>
-                        <th>icon</th>
-                      </tr>
+                      <tbody>
+                        <tr>
+                          <th className='fieldDescription'>Domingo, 28</th>
+                          <th>icon</th>
+                        </tr>
+                        <tr>
+                          <th className='fieldDescription'>Domingo, 28</th>
+                          <th>icon</th>
+                        </tr>
+                        <tr>
+                          <th className='fieldDescription'>Domingo, 28</th>
+                          <th>icon</th>
+                        </tr>
+                        <tr>
+                          <th className='fieldDescription'>Domingo, 28</th>
+                          <th>icon</th>
+                        </tr>
+                        <tr>
+                          <th className='fieldDescription'>Domingo, 28</th>
+                          <th>icon</th>
+                        </tr>
+                        <tr>
+                          <th className='fieldDescription'>Domingo, 28</th>
+                          <th>icon</th>
+                        </tr>
+                        <tr>
+                          <th className='fieldDescription'>Domingo, 28</th>
+                          <th>icon</th>
+                        </tr>
+                      </tbody>
                     </table>
                   </div>
                 </div>
