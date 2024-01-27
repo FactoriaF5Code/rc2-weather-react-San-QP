@@ -1,6 +1,5 @@
 .mainContent{
     display: flex;
-    /* grid-template-columns: auto 6fr auto; */
     font-family: var(--font-family);
 }
 
@@ -102,7 +101,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* outline: 1px solid red; */
 }
 
 .mainTemp{
@@ -146,7 +144,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* outline: 1px solid red; */
 }
 
 .iconWeather{

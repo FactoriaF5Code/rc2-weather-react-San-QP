@@ -1,4 +1,5 @@
 .panelDetails{
+    flex: 6;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -87,6 +88,7 @@
 .hourlyForecast, .daylyForecast{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .forecastTable{
@@ -117,4 +119,46 @@
 }
 
 
+@media (max-width: 1600px) {
+    .columnMosaic{
+        display:none;
+    }
+}
 
+@media (max-width: 1079px) {
+    .moreDetails{
+        flex-direction: column;
+        align-items: center;
+        gap:50px;
+        margin:0;
+    }
+    .backButton{
+        margin-top: 40px;
+    }
+}
+
+
+@media (max-width: 620px) {
+    .panelDetails{
+        padding: 10px;
+    }
+    .forecast {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .panelDetails {
+        padding: 0;
+    }
+    .weatherToday{
+        padding: 20px;
+    }
+    .mainContent{
+        justify-content: center;
+    }
+}
