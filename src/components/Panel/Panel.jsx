@@ -121,6 +121,9 @@ export const Panel = () => {
                                 {weatherValues.list[0].weather[0].description}
                             </p>
                         </li>
+                        <div className="detailsButton detailsButtonPhone">
+                                <Link to={`/weatherDetails/${search}`}>Más detalles</Link>
+                        </div>
                     </ul>
                     
                 </div>

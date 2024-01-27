@@ -19,6 +19,7 @@
     color: var(--color-main);
     font-size: 36px;
     letter-spacing: 0.1em;
+    text-align: center;
 }
 
 .description{
@@ -28,4 +29,15 @@
     font-weight: 300;
     letter-spacing: 0.15rem;
     text-align: center;
+}
+
+@media (max-width: 780px) {
+    .headerPage{
+        display: flex;
+        justify-content: center;
+        padding:10px 0;
+    }
+    .headerPage img{
+        display: none;
+    }
 }

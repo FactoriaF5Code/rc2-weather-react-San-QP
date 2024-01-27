@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Icons from "../Icons";
 import '../Details/Details.css'
 import '../Home/Home.css';
