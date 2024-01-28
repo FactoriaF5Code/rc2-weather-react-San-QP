@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import { Link, useParams } from "react-router-dom";
 import { Header } from "../Header/Header";
@@ -6,15 +7,14 @@ import { DaylyForecast } from "./DaylyForecast";
 import './Details.css';
 import '../Home/Home.css';
 import '../Panel/Panel.css';
+import { getCurrentDayOfWeek } from "../getDateOfWeek";
 
 export const Details = () => {
   const [weatherValues, setWeatherValues] = useState("");
   const { location } = useParams();
 
-  const currentDate = new Date();
-  const daysOfWeek = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
-  const currentDayOfWeek = daysOfWeek[currentDate.getDay()]
-        
+  const currentDayOfWeek = getCurrentDayOfWeek();
+
   const URL = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&lang=es&units=metric&appid=${import.meta.env.VITE_API_KEY}`;
     
   const getData = async () => {
@@ -59,7 +59,7 @@ export const Details = () => {
                 <h2 className="cityName">{weatherValues.city.name}</h2>
                 </li>
                 <li className="date">
-                    {`${currentDayOfWeek}, ${new Date().toLocaleDateString()}, ${new Date().toLocaleTimeString()}`}
+                    {`${currentDayOfWeek}, ${new Date().toLocaleDateString()}, ${new Date().toLocaleTimeString()}`};
                 </li>
               </ul>
               <div className='moreDetails'>

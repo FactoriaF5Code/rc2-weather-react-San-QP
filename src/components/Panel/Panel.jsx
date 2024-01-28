@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import "./Panel.css";
 import { getUserLocation } from "../geolocation"
+import { getCurrentDayOfWeek } from "../getDateOfWeek";
 import Icons from '../Icons';
 
 export const Panel = () => {
@@ -9,10 +11,8 @@ export const Panel = () => {
     const [weatherValues, setWeatherValues] = useState("");
     const [icon, setIcon] = useState("");
 
-    const currentDate = new Date();
-    const daysOfWeek = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
-    const currentDayOfWeek = daysOfWeek[currentDate.getDay()]
-        
+    const currentDayOfWeek = getCurrentDayOfWeek();
+
     const URL = `https://api.openweathermap.org/data/2.5/forecast?q=${search}&lang=es&units=metric&appid=${import.meta.env.VITE_API_KEY}`;
     
     const getData = async () => {

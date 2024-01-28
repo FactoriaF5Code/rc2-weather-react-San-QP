@@ -5,13 +5,12 @@ import { Details } from "./components/Details/Details";
 
 
 function App() {
-
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={ <Home /> } />
-          <Route path="/weatherDetails/:location" element={<Details />} />
+          <Route path="/weatherDetails/:location" element={<Details />}/>
         </Routes>
       </BrowserRouter>      
     </>
